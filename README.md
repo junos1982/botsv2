@@ -1,3 +1,10 @@
+### 파일 자르기 맥오에스
+211:botsv3_data junos1982$ wc -l bots3_event.txt 
+ 5693007 bots3_event.txt
+211:botsv3_data junos1982$ split -a1 -l $((`wc -l bots3_event.txt | awk '{print $1}'` / 3 + 1)) bots3_event.txt output
+
+
+
 # Boss of the SOC (BOTS) Dataset Version 2
 A sample security dataset and CTF platform for information security professionals, researchers, students, and enthusiasts. This page hosts information regarding the version 2 *dataset*. If you would like access to the scoreboard software, please visit [the CTF Scoreboard Github repository](https://github.com/splunk/SA-ctf_scoreboard). If you are looking for the BOTS version 1 dataset, it can be found [here](https://github.com/splunk/botsv1).
 
